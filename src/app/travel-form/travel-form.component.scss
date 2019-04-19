@@ -1,0 +1,21 @@
+app-travel-form {
+  label {
+    margin: 0.5em 0;
+  }
+  input.input,
+  div.select select {
+    border: none;
+    border-color: transparent;
+    box-shadow: none;
+    border-bottom: 0.15rem solid #dbdbdb;
+    background-color: #fdfdfd;
+  }
+  section {
+    min-height: 55vh;
+    background-color: #fdfdfd;
+  }
+  .title-form1 {
+    text-align: center;
+    padding: 3rem 0 2rem 0;
+  }
+}

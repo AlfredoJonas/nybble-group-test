@@ -1,0 +1,16 @@
+app-header {
+  .header-image {
+    // This style help for give a style of movement to the image, with a glass opacity
+    min-height: 45vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.15), rgba(0, 0, 0, 0.15)),
+      url("../../resources/aeroplane2.jpg") no-repeat center fixed;
+    background-position: 50% 65%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }
+  .center-flex-children {
+    justify-content: center;
+    text-align: center;
+  }
+}

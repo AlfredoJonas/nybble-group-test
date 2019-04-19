@@ -1,0 +1,16 @@
+@import "~bulma/bulma";
+
+h1,
+h3 {
+  font-family: "OpenSansCondensed Light";
+  letter-spacing: 0.2rem;
+}
+
+p {
+  font-family: "OpenSansCondensed Light";
+}
+
+@font-face {
+  font-family: "OpenSansCondensed Light";
+  src: url("fonts/OpenSansCondensed-Light.ttf");
+}

@@ -1,0 +1,99 @@
+<!-- This is the structure of main form, used to put the travel information 
+  all data it's found inside the 'travel' object-->
+<section>
+  <h1 class="title-form1 has-text-black is-size-4">Enter Your Trip Information</h1>
+  <div class="container is-fluid">
+    <div class="columns">
+      <div class="column">
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input" type="number" ng-model="$ctrl.travel.numberReservation"
+                    placeholder="Reservation Number">
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="label">SHIP</div>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select ng-model="$ctrl.travel.ship">
+                    <option value="" disabled>Select Ship</option>
+                    <option value="CELEBRITY CONSTELLATION">CELEBRITY CONSTELLATION</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="field">
+                <p class="control is-expanded">
+                  <input class="input" type="text" ng-model="$ctrl.travel.lastName"
+                    placeholder="Last Name on Reservation">
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="label">SAIL DATE</div>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select ng-model="$ctrl.travel.month">
+                    <option value="" disabled>Month</option>
+                    <!-- Get all moths based on the moment library -->
+                    <option ng-repeat="(key, month) in $ctrl.moment.months()" value="{{key+1}}">{{month}}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="field is-expanded">
+              <div class="label">&nbsp;</div>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select ng-model="$ctrl.travel.day">
+                    <option value="" disabled>Day</option>
+                    <option ng-repeat="day in $ctrl.getDaysMonths($ctrl.travel.month, $ctrl.travel.year)"
+                      value="{{day}}">{{day}}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+            <div class="field is-expanded">
+              <div class="label">&nbsp;</div>
+              <div class="control">
+                <div class="select is-fullwidth">
+                  <select ng-model="$ctrl.travel.year">
+                    <option value="" disabled>Year</option>
+                    <option ng-repeat="year in $ctrl.getYearsRange()" value="{{year}}">{{year}}</option>
+                  </select>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center">
+      <label class="checkbox">
+        <input type="checkbox" ng-model="$ctrl.remember">
+        Remember my information
+      </label>
+      <br>
+      <a class="button is-link" ng-click="$ctrl.save($ctrl.travel,$ctrl.remember)">FIND RESERVATION</a>
+    </div>
+  </div>
+</section>

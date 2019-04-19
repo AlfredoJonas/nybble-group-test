@@ -1,0 +1,98 @@
+<!-- This is the structure for show the detail, is equal to the main form structure 
+  all data it's found inside the 'travel' object -->
+<section>
+  <h1 class="title-form1 has-text-black is-size-4">Enter Your Trip Information</h1>
+  <div class="container is-fluid">
+    <div class="columns">
+      <div class="column">
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="field">
+                <div class="label">
+                  <p class="has-text-info is-size-7">Reservation Number</p>
+                </div>
+                <div class="control is-expanded">
+                  <div class=" is-fullwidth">{{$ctrl.travel.numberReservation}}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="label">SHIP</div>
+              <div class="label">
+                <p class="has-text-info is-size-7">Select Ship</p>
+              </div>
+              <div class="control">
+                <div class=" is-fullwidth">
+                  {{$ctrl.travel.ship}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="column">
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="field">
+                <div class="label">
+                  <p class="has-text-info is-size-7">Last Name on Reservation</p>
+                </div>
+                <p class="control is-expanded">
+                  <div class="">{{$ctrl.travel.lastName}}</div>
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="field is-horizontal">
+          <div class="field-body">
+            <div class="field is-expanded">
+              <div class="label">SAIL DATE</div>
+              <div class="label">
+                <p class="has-text-info is-size-7">Month</p>
+              </div>
+              <div class="control">
+                <div class=" is-fullwidth">
+                  <!-- This is used for put in the select input the correct month write or empty -->
+                  {{$ctrl.travel.month == null ? "" : $ctrl.moment().month($ctrl.travel.month - 1).format('MMMM')}}
+                </div>
+              </div>
+            </div>
+            <div class="field is-expanded">
+              <div class="label">&nbsp;</div>
+              <div class="label">
+                <p class="has-text-info is-size-7">Day</p>
+              </div>
+              <div class="control">
+                <div class=" is-fullwidth">
+                  {{$ctrl.travel.day}}
+                </div>
+              </div>
+            </div>
+            <div class="field is-expanded">
+              <div class="label">&nbsp;</div>
+              <div class="label">
+                <p class="has-text-info is-size-7">Year</p>
+              </div>
+              <div class="control">
+                <div class=" is-fullwidth">
+                  {{$ctrl.travel.year}}
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div style="text-align: center">
+      <label class="checkbox">
+        <a class="button is-link" ng-click="$ctrl.goBack()">EDIT RESERVATION</a>
+    </div>
+  </div>
+</section>
