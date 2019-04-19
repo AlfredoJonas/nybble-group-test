@@ -1,6 +1,6 @@
 # Nybble Group Test
 
-This is a project to build a test for a Nybble enterprise
+This is a project to build a test for a Nybble enterprise. In this opportunity build a Angularjs aplication with a structure of Angular2 because the objective the project you want contract me is to update an app from Angularjs to Angular2, and this is a good way for will make.
 
 ## Getting Started
 
@@ -9,6 +9,8 @@ To get you started you can simply clone the repository.
 ### Install Dependencies
 
 We have two type of dependencies in this project: development tools and application specific packages. They are both managed with npm in package.json as devDependencies and dependencies.
+
+The way for build a Angularjs app with a structure of Angular2 is throug a angular-ts-decorators dependencie with a Typescript language, of rest are development dependencies.
 
 ```
 npm install
@@ -27,4 +29,4 @@ npm install
 
 The project comes preconfigured with a local development webserver. It is a webpack-dev-server, that supports hot reload for a typescript files but not for a sass styles.  You can start this webserver with `npm start`.
 
-Now browse to the app at `http://localhost:3000/`.
+Now browse to the app at `http://localhost:8080/`.
