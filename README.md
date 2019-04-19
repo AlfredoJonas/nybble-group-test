@@ -20,9 +20,12 @@ npm install
 
 ```
   src/                  --> all of the source files for the application
-  app/                  --> static app assets
-  main.ts               --> main application module
-  index.html            --> app layout file (the main html template file of the app)
+    app/                --> static app assets
+    resources/          --> The media resources to the aplication
+    styles/             --> Global styles, like fonts or libraries
+    test.ts             --> The main config for run tests
+    main.ts             --> main application module
+    index.html          --> app layout file (the main html template file of the app)
 ```
 
 ### Running the App
